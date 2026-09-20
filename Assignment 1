@@ -1,1 +1,18 @@
-
+student1=(101,"Rahul","CSE",85)
+student2=(102,"Amit","AI&DS",78)
+students_list=[student1,student2]
+students={
+    101:student1,
+    102:student2
+}
+student3=(103,"Priya","AI&DS",90)
+students[103]=student3
+del students[102]
+students[101]=(101,"Rahul","CSE",92)
+print("Final Student Records:")
+for roll_no, details in students.items():
+    print("Roll Number:",details[0])
+    print("Name:",details[1])
+    print("Branch:",details[2])
+    print("Marks",details[3])
+    print()
