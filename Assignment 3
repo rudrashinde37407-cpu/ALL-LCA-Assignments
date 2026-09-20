@@ -1,1 +1,25 @@
+mport math
 
+
+def is_right_angled(a, b, c):
+
+    sides = sorted([a, b, c])
+
+
+    if sides[0] + sides[1] <= sides[2] or sides[0] <= 0:
+        return False
+
+
+    return math.isclose(sides[0] ** 2 + sides[1] ** 2, sides[2] ** 2)
+
+
+
+side1 = float(input("Enter length of first side: "))
+side2 = float(input("Enter length of second side: "))
+side3 = float(input("Enter length of third side: "))
+
+
+if is_right_angled(side1, side2, side3):
+    print("The given side lengths form a right-angled triangle.")
+else:
+    print("The given side lengths DO NOT form a right-angled triangle.")
